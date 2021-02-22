@@ -135,10 +135,11 @@ void BinaryTree::remove(int value)
 		}
 		//end loop
 
-		//Once the smallest value has been found, copy the data in first iterator to the node we want to remove.
+		//Once the smallest value has been found, declare a variable to hold firstIter's data, set firstIter's data to nodeFound's data
+		//copy the data in first iterator to the node we want to remove.
 		int iterVal = firstIter->getData();
 		firstIter->setData(nodeFound->getData());
-		nodeFound->setData(iterVal); //being set too early
+		nodeFound->setData(iterVal);
 
 
 		//Check if the second iterator has a left child.
@@ -151,7 +152,6 @@ void BinaryTree::remove(int value)
 			}
 
 		//Check if the second iterator has a right child.
-		//line 140 causing unwanted issues
 		if (secondIter->hasRight())
 			//Check if the right child contains the same data as the node we want to remove.
 			if (secondIter->getRight()->getData() == nodeRemove->getData())
