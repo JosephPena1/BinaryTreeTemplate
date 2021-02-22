@@ -162,6 +162,7 @@ void BinaryTree::remove(int value)
 
 		//Delete the first iterator
 		delete firstIter;
+		delete nodeRemove;
 
 		return;
 	}
