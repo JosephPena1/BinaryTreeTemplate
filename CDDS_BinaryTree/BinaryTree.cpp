@@ -117,6 +117,9 @@ void BinaryTree::remove(int value)
 		}
 	}//end loop
 
+	if (nodeFound == nullptr)
+		return;
+
 	//Check to see if the node has a right child
 	if (nodeFound->hasRight())
 	{
